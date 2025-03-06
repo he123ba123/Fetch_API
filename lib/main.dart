@@ -13,10 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BlocProvider(
-        create: (context) => PostCubit()..fetchDataCubit(),
-        child: const HomeScreen(),
-      ),
+      home: const HomeScreen(),
     );
   }
 }
