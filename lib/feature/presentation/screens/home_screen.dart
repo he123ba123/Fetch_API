@@ -1,4 +1,5 @@
 import 'package:fetch_api/feature/presentation/cubit/post_cubit.dart';
+import 'package:fetch_api/feature/presentation/cubit/post_event.dart';
 import 'package:fetch_api/feature/presentation/cubit/post_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => PostCubit()..fetchDataCubit(),
+      create: (context) => PostCubit()..add( FetchDataEvent()),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Home Screen'),
@@ -40,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
         // floatingActionButton: FloatingActionButton(onPressed: () {
-        //   context.read<PostCubit>().fetchDataCubit();
+        //   context.read<PostCubit>().add(FetchDataEvent());
         // }),
       ),
     );
