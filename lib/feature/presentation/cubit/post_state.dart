@@ -1,7 +1,7 @@
 import 'package:fetch_api/feature/data/model/post_model.dart';
 import 'package:equatable/equatable.dart';
 
-class PostState extends Equatable {
+sealed class PostState extends Equatable {
   @override
   List<Object?> get props => [];
 }
