@@ -1,37 +1,29 @@
-import 'package:fetch_api/feature/data/model/post_model.dart';
 import 'package:equatable/equatable.dart';
+import 'package:fetch_api/feature/data/model/post_model.dart';
 
-sealed class PostState extends Equatable {
+sealed class PostStateCubit extends Equatable {
+  
   @override
   List<Object?> get props => [];
 }
 
-class PostInitial extends PostState {}
+final class PostInitialcubit extends PostStateCubit {}
 
-class PostLoading extends PostState {}
+class PostLoadingCubit extends PostStateCubit {}
 
-class PostSuccess extends PostState {
+class PostSuccessCubit extends PostStateCubit {
   // returen list of posts as a post model type
   final List<PostModel> posts;
-  PostSuccess({required this.posts});
+  PostSuccessCubit({required this.posts});
+
   @override
   List<Object?> get props => [posts];
 }
 
-class PostError extends PostState {
+class PostErrorcubit extends PostStateCubit {
   final String errorMessage;
-  PostError({required this.errorMessage});
+  PostErrorcubit({required this.errorMessage});
+
   @override
   List<Object?> get props => [errorMessage];
 }
-
-//  Equatable : A package for value comparison 
-//  https://pub.dev/packages/equatable
-//  use in state files to improve code readability 
-//  improve preformance
-//  avoid unnecessary rebuilds
-//  avoid memory leaks
-//  avoid bugs
-//  improve testability
-//  simplify code
-//  simplify debugging
