@@ -28,13 +28,13 @@ class PostModel {
     };
   }
 
-    // Convert List of JSON to List of UserModel
-  static List<PostModel> listFromJson(List<dynamic> jsonList) {
-    return jsonList.map((json) => PostModel.fromJson(json)).toList();
-  }
+  //   // Convert List of JSON to List of UserModel
+  // static List<PostModel> listFromJson(List<dynamic> jsonList) {
+  //   return jsonList.map((json) => PostModel.fromJson(json)).toList();
+  // }
 
-  // Convert List of UserModel to List of JSON
-  static List<Map<String, dynamic>> listToJson(List<PostModel> users) {
-    return users.map((user) => user.toJson()).toList();
-  }
+  // // Convert List of UserModel to List of JSON
+  // static List<Map<String, dynamic>> listToJson(List<PostModel> users) {
+  //   return users.map((user) => user.toJson()).toList();
+  // }
 }

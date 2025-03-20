@@ -1,7 +1,6 @@
 import 'package:fetch_api/feature/data/model/post_data.dart';
 import 'package:fetch_api/feature/data/model/post_model.dart';
 import 'package:fetch_api/feature/presentation/cubit/post_state.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 class PostCubit extends HydratedCubit<PostStateCubit> {
